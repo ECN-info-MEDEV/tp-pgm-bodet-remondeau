@@ -59,7 +59,7 @@ public class Ecriture {
         
         BufferedWriter writer;
         try {
-            writer = new BufferedWriter(new FileWriter(this.path, true));
+            writer = new BufferedWriter(new FileWriter(this.path, false));
             writer.append(res);
 
         writer.close();

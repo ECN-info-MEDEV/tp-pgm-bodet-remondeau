@@ -15,8 +15,16 @@ public class Main {
         
         Ecriture test = new Ecriture();
         
-        int test2 = 10;
+        int[][] test2 = new int[512][512];
         
+        
+        for (int i=0; i<512; i++){
+            for (int j=0; j<512; j++){
+                test2[i][j] = (i+j)%255;
+            }
+        }
+        
+        test.ecrire(test2, null);
        
     }
     
