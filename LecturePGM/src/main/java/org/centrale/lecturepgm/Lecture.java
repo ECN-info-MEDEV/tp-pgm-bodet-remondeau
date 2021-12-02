@@ -38,42 +38,26 @@ public class Lecture {
         ligne = this.fichier.readLine(); // P2
         ligne = this.fichier.readLine(); // commentaire
         ligne = this.fichier.readLine(); // hauteur et largeur
-
         
+        String delimiteurs = " ,.;";        
+        StringTokenizer tokenizer = new StringTokenizer(ligne, delimiteurs);
         
-        int largeur = Integer.parseInt(ligneListe.get(0));
-        int hauteur = Integer.parseInt(ligneListe.get(1));
+        String mot = tokenizer.nextToken();
+        int largeur = Integer.parseInt(mot);
+        mot = tokenizer.nextToken();
+        int hauteur = Integer.parseInt(mot);
         
         int[][] image =  new int[largeur][hauteur];
         
-        
-        aaa
-        
-        
-        
-        while (ligne!=null){
-            
+        for (int[] line: image){
+            for (int i: line) {
+                if (!(tokenizer.hasMoreTokens())){
+                    mot = tokenizer.nextToken();
+                }
+                i = Integer.parseInt(mot);
+            }
         }
         return null;
-        
     }
     
-    
-    public int[] ligneAListe(String ligne){
-        String delimiteurs = " ,.;";        
-        StringTokenizer tokenizer = new StringTokenizer(ligne, delimiteurs);
-        int[] liste = new int[70];
-        String mot;
-        int a;
-        int i=0;
-        
-        while(tokenizer.hasMoreTokens()) {
-            // nextToken() retourne la prochaine unite lexicale decoupee par les delimiteurs
-            mot = tokenizer.nextToken();
-            a = Integer.parseInt(mot);
-            liste[i] = a;
-            
-        }
-        return liste;
-    }    
 }
