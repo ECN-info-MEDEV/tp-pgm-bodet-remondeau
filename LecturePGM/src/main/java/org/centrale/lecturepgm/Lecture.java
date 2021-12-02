@@ -39,9 +39,7 @@ public class Lecture {
         ligne = this.fichier.readLine(); // commentaire
         ligne = this.fichier.readLine(); // hauteur et largeur
 
-        ArrayList<String> ligneListe;
         
-        ligneListe = ligneAListe(ligne);
         
         int largeur = Integer.parseInt(ligneListe.get(0));
         int hauteur = Integer.parseInt(ligneListe.get(1));
@@ -49,7 +47,7 @@ public class Lecture {
         int[][] image =  new int[largeur][hauteur];
         
         
-        
+        aaa
         
         
         
@@ -73,7 +71,8 @@ public class Lecture {
             // nextToken() retourne la prochaine unite lexicale decoupee par les delimiteurs
             mot = tokenizer.nextToken();
             a = Integer.parseInt(mot);
-            liste.add(a);
+            liste[i] = a;
+            
         }
         return liste;
     }    
