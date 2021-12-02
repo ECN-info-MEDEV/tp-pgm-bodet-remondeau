@@ -4,12 +4,18 @@
  */
 package org.centrale.lecturepgm;
 
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.awt.image.WritableRaster;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 /**
  *
@@ -27,7 +33,7 @@ public class Lecture {
         this.path=nomFichier;
     }
 
-    public String lireFichier() throws IOException{
+    public int[][] lireFichier() throws IOException{
         System.out.println("Chargement du fichier "+this.path+" ...");        
         try{
             this.fichier = new BufferedReader(new FileReader(this.path));
@@ -57,7 +63,6 @@ public class Lecture {
                 i = Integer.parseInt(mot);
             }
         }
-        return null;
-    }
-    
+        return image;
+    }  
 }
