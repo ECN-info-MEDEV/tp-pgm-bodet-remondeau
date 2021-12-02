@@ -13,7 +13,11 @@ public class Main {
     
     public static void main(String[] args){
         
+        Ecriture test = new Ecriture();
         
+        int test2 = 10;
+        
+       
     }
     
 }
